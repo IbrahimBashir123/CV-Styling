@@ -1,0 +1,263 @@
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h3::before {
+  content: "";
+  color: red;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.experience-details {
+  color: rgb(126, 117, 117);
+  padding-left: 10px;
+}
+
+.experience-date-separator {
+  color: red;
+  font-weight: bold;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  padding: 0 0 0 120px;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+hgroup {
+  color: red;
+  margin: 0;
+  padding: 0px;
+}
+
+#about > h3,
+#competencies > h3,
+#experiences > h3,
+#education > h3,
+#hobbies > h3 {
+  border-bottom: 1px solid rgb(224, 220, 220);
+  padding-bottom: 15px;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5% 10% 5% 10%;
+}
+section {
+  width: 50%;
+}
+section p {
+  padding-right: 20px;
+}
+
+.experience-type {
+  color: red;
+}
+.experience-institution {
+  color: red;
+}
+
+ /* Competencies Skills Styling*/
+
+.skill {
+  width: 100%;
+  background-color: rgba(136, 131, 131, 0.404);
+  border: 2px linen #2c4d76;
+  margin: 5px 5px 5px 0;
+  padding: 5px;
+}
+
+/* Adding the word main before the skill grading */
+.skills-primary::before {
+  content: "Main";
+}
+/*Adding the word other before the skill grading */
+.skills-secondary::before {
+  content: "Other";
+}
+
+.skill span {
+  display: inherit;
+  background-color: red;
+  color: #cfcdcd;
+  font-weight: bold;
+  padding: 3px;
+}
+
+.skill[data-skill='1'] span {
+  width: calc(10% - 2%);
+}
+
+.skill[data-skill='2'] span {
+  width: calc(20% - 2%);
+}
+
+.skill[data-skill='3'] span {
+  width: calc(30% - 2%);
+}
+
+.skill[data-skill='4'] span {
+  width: calc(40% - 2%);
+}
+
+.skill[data-skill='5'] span {
+  width: calc(50% - 2%);
+}
+
+.skill[data-skill='6'] span {
+  width: calc(60% - 2%);
+}
+
+.skill[data-skill='7'] span {
+  width: calc(70% - 2%);
+}
+
+.skill[data-skill='8'] span {
+  width: calc(80% - 2%);
+}
+
+.skill[data-skill='9'] span {
+  width: calc(90% - 2%);
+}
+
+.skill[data-skill='10'] span {
+  width: calc(100% - 2%);
+}
+
+
+[data-skill="9"] span{
+  background-color: #ff4b4b;
+  width: 90%;
+  display: block;
+  padding: 1%;
+}
+
+.skills-secondary [data-skill="5"] span{
+  background-color: #ff4b4b;
+  width: 50%;
+  display: block;
+  padding: 1%;
+} 
+
+[data-skill="7"] span{
+  background-color: #ff4b4b;
+  width: 75%;
+  display: block;
+  padding: 1%;
+}
+
+.skills-secondary div {
+  opacity: 0.8;
+}
+
+#contact {
+  position: absolute;
+  top: 2%;
+  right: 30px;
+}
+#contact h3 {
+  display: none;
+}
+.contact {
+  display: flex;
+  margin: 0;
+  width: min-content;
+}
+.contact-type {
+  width: 110px;
+  background-color: red;
+  color: #fff;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
+  border-left: 3px solid red;
+}
+
+.contact-value {
+  width: 500px;
+  margin-left: 0;
+  padding-left: 10px;
+  /* border-right: 3px solid white; */
+}
+dd,
+dd a{
+  background-color: black;
+  color: black;
+  text-decoration: none;
+}
+
+dd  a{
+  background-color: black;
+  color: red;
+  text-decoration: none;
+}
+
+/* Responsive Media Querying for Tablets & Large Screens*/
+@media (max-width: 992px) {
+  /* Media Header */
+  header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  /* Media Content */
+  #hobbies {
+    width: 100%;
+  }
+  /* Media Contact */
+  #contact {
+    position: static;
+  }
+  #contact h3 {
+    display: inherit;
+  }
+  dd,
+  dd a {
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    width: 100%;
+  }
+  /* Media Content */
+  section {
+    width: 100%;
+  }
+  /* Media Contact */
+  #contact {
+    position: static;
+  }
+  #contact h3 {
+    display: inherit;
+  }
+  .contact-value {
+    width: 200px;
+    margin-left: 0;
+    padding-left: 10px;
+  }
+  header > div {
+    display: flex;
+    align-items: center;
+    background-color: grey;
+    padding: 0 0 0 50px;
+    padding-bottom: 0;
+    margin: 0;
+  }
+}
